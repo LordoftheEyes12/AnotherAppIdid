@@ -65,10 +65,10 @@ const routes: Route[] = [
     handler: async (req: Request) => {
       if (req.method === "POST") {
         const body = await req.json();
-        const { title, content } = body;
+        const { headline, content } = body;
 
-        db.query("INSERT INTO articles (title, content) VALUES (?, ?)", [title, content]);
-        return new Response(JSON.stringify({ message: "Article added", article: { title, content } }), {
+        db.query("INSERT INTO articles (title, content) VALUES (?, ?)", [headline, content]);
+        return new Response(JSON.stringify({ message: "Article added", article: { headline, content } }), {
           headers: { "Content-Type": "application/json" },
         });
       }
