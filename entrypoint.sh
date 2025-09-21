@@ -3,7 +3,7 @@ set -e
 
 
 REPO_DIR="/app/myrepo"
-GIT_REPO="https://github.com/LordoftheEyes12/Diplomprojekt-WKO.git"
+GIT_REPO="https://github.com/LordoftheEyes12/AnotherAppIdid.git"
 DENO_ENTRYPOINT="main.ts"
 
 if [ ! -d "$REPO_DIR" ]; then
