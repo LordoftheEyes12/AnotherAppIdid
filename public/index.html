@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apfelsaft News</title>
+  <link rel="stylesheet" href="/style.css?v=4" />
+</head>
+<body>
+  <!-- Header / Masthead -->
+  <header class="app-header container">
+    <div class="masthead">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+      <h1 class="brand">News oder so</h1>
+      <button id="refreshBtn" class="icon-btn" title="Reload articles">↻</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container layout">
+    <section class="panel">
+      <div id="articlesGrid" class="grid" aria-live="polite"></div>
+
+      <template id="articleCardTpl">
+        <article class="card" tabindex="0">
+          <h3 class="card-title"></h3>
+          <p class="card-snippet"></p>
+          <div class="card-actions">
+            <button class="btn btn-primary card-open">Read</button>
+          </div>
+        </article>
+      </template>
+
+      <div id="emptyState" class="empty hidden">
+        <p>No articles yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reader Dialog -->
+  <dialog id="viewer">
+    <article class="reader">
+      <header class="reader-header">
+        <h3 id="viewerTitle" class="reader-headline"></h3>
+        <button id="viewerClose" class="icon-btn" aria-label="Close">✕</button>
+      </header>
+      <div id="viewerContent" class="reader-body"></div>
+    </article>
+  </dialog>
+
+ 
+  <script src="/script.js?v=4" type="module"></script>
+</body>
+</html>
